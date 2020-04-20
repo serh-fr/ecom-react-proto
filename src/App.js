@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Catalog from './components/Catalog/Catalog';
+import CartContainer from './components/Cart/CartContainer';
+import NavigationContainer from './components/Navigation/NavigationContainer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = props => {
+
+  return <div className='container'>
+    <BrowserRouter>
+      <Provider store={props.store}>
+        <NavigationContainer />
+        <div className={'content'}>
+          <Route path={'/catalog'} render={() => <Catalog />}/>
+          <Route path={'/cart'} render={() => <CartContainer />}/>
+          <Route exact path={'/'} render={() => <Catalog />}/>
+        </div>
+      </Provider>
+    </BrowserRouter>
+  </div>
 }
 
 export default App;

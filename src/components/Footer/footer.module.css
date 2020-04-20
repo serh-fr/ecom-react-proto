@@ -1,0 +1,15 @@
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.downloadCsv {
+    border-bottom: 1px solid black;
+}
+
+.downloadCsv:hover {
+    color: #6FCF97;
+    border-bottom: 1px solid #6FCF97;
+}

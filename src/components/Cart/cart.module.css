@@ -1,0 +1,53 @@
+.cart h1 span {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.item {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border-bottom: 1px solid black;
+}
+
+.item__title {
+    flex-basis: 70%;
+}
+
+.item__price {
+    flex-basis: 15%;
+    text-align: right;
+}
+
+.item_changeNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 15%;
+}
+
+.item_changeNumber span {
+    margin: 0 10px;
+}
+
+.item__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.item__storage span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+.productsList {
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.productsHeaders,
+.products {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr 1fr repeat(3, 130px);
+}
+
+.productsHeaders {
+    border-bottom: 1px solid rgba(31, 32, 65, .05);
+}
+
+.productsHeaders div {
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.products {
+    cursor: pointer;
+    border-bottom: 1px solid rgba(31, 32, 65, .05);
+}
+
+.products:last-child {
+    border-bottom: none;
+}
+
+.products div.productTitle {
+    text-align: left;
+}
+
+.products div {
+    padding: 8px 15px;
+    text-align: center;
+}
